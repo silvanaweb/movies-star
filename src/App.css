@@ -1,0 +1,75 @@
+:root {
+  --dark-grey: #333333;
+  --teal: #008080;
+  --teal-ligther: #afd1d1;
+  /* font */
+  --font-normal: 1.6rem;
+  --font-medium: 2.5rem;
+  /* sizes */
+  --s-size: 1.2rem;
+  --m-size: 1.6rem;
+  --l-size: 3.2rem;
+  --xl-size: 4.8rem;
+  /* media */
+  --desktop-breakpoint: 45rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: var(--dark-grey);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: var(--font-normal);
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.content-container {
+  margin: 0 auto;
+  padding: 0 var(--m-size);
+  max-width: 80rem;
+}
+
+.Input {
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.Input--number {
+  max-width: 6rem;
+}
+
+.Button {
+  background-color: var(--teal);
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  padding: var(--s-size);
+}
+.Button--neutral {
+  background-color: transparent;
+  border: none;
+}
+
+.Button--link {
+  background-color: transparent;
+  border: none;
+  color: var(--teal);
+  display: inline;
+  font-size: var(--m-size);
+  padding: 0;
+}

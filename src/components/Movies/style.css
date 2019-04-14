@@ -1,0 +1,17 @@
+.Movie__link {
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+.Movie__link:hover {
+  color: var(--teal);
+}
+
+.Movie__new {
+  color: red;
+}
+.Movie__link:hover .Movie__new {
+  color: rgb(158, 6, 6);
+}
+.MoviesList__filter {
+  margin: var(--l-size) 0;
+}
