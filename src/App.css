@@ -1,6 +1,6 @@
 :root {
   --dark-grey: #333333;
-  --teal: #008080;
+  --teal: #026565;
   --teal-ligther: #afd1d1;
   /* font */
   --font-normal: 1.6rem;
@@ -16,6 +16,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -40,8 +42,21 @@ button:disabled {
 
 .content-container {
   margin: 0 auto;
-  padding: 0 var(--m-size);
-  max-width: 80rem;
+  padding: 0 var(--s-size);
+}
+
+@media (min-width: 45rem) {
+  .content-container {
+    padding: 0 var(--m-size);
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .content-container {
+    padding: 0 var(--m-size);
+    max-width: 100rem;
+  }
 }
 
 .Input {

@@ -15,7 +15,7 @@ const getListMovie = genresMap => ({
   popularity,
   vote_average,
   title,
-  genres: genre_ids.map(gid => genresMap[gid].name),
+  genres: genre_ids.map(gid => genresMap[gid]),
   poster_path,
   id
 });

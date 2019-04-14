@@ -2,9 +2,9 @@ const setSelectedGenre = genres => ({
   type: "SET_SELECTED_GENRE",
   genres
 });
-const setRating = rating => ({
-  type: "SET_RATING",
+const setSelectedRating = rating => ({
+  type: "SET_SELECTED_RATING",
   rating
 });
 
-export { setSelectedGenre, setRating };
+export { setSelectedGenre, setSelectedRating };

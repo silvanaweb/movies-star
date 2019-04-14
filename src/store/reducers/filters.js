@@ -1,7 +1,7 @@
 // Filters Reducer
 
 const filtersReducerDefaultState = {
-  rating: "",
+  rating: 3,
   genres: []
 };
 
@@ -12,7 +12,7 @@ export default (state = filtersReducerDefaultState, action) => {
         ...state,
         genres: action.genres
       };
-    case "SET_RATING":
+    case "SET_SELECTED_RATING":
       return {
         ...state,
         rating: action.rating

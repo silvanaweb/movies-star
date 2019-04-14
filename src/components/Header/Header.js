@@ -1,9 +1,12 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => (
-  <div>
-    <h1>Movies Start</h1>
-  </div>
+  <header className="Header">
+    <div className="content-container">
+      <h1>Movies Stars</h1>
+    </div>
+  </header>
 );
 
 export default Header;

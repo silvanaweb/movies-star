@@ -2,13 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 import { setSelectedGenre } from "../../store/actions/filters";
 import genresSelector from "../../store/selectors/genres";
-import "./style.css";
+import { Checkbox } from "../Checkbox/Checkbox";
+import "./Filters.css";
 
 const mkGenresState = genres => {
   let stateGenres = {};
-  Object.values(genres).forEach(g => {
-    stateGenres[g.id] = {
-      ...g,
+  Object.entries(genres).forEach(([key, value]) => {
+    stateGenres[key] = {
+      id: key,
+      name: value,
       selected: false
     };
   });
@@ -27,23 +29,22 @@ class FilterByGenre extends React.Component {
   render() {
     const { selectedGenres } = this.state;
     return (
-      <header className="Header">
+      <div className="Filters">
         <div className="content-container">
-          <div className="Header__content">
+          <div className="Filters__content">
             {Object.values(selectedGenres).map(genre => (
-              <label key={genre.id}>
-                {genre.name}
-                <input
-                  type="checkbox"
+              <div key={genre.id} className="Filters__genre">
+                <Checkbox
+                  title={genre.name}
                   name={genre.id}
                   checked={selectedGenres[genre.id].selected}
                   onChange={this.onSelectedGenre}
                 />
-              </label>
+              </div>
             ))}
           </div>
         </div>
-      </header>
+      </div>
     );
   }
 

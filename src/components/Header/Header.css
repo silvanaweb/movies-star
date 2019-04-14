@@ -1,0 +1,5 @@
+.Header {
+  background-color: var(--teal);
+  color: var(--teal-ligther);
+  padding: var(--m-size);
+}

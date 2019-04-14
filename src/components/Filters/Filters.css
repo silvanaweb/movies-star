@@ -1,0 +1,27 @@
+.Filters {
+  padding: var(--m-size) 0;
+}
+
+.Filters__content {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+}
+
+.Filters__genre {
+  margin-bottom: var(--s-size);
+}
+
+@media (min-width: 45rem) {
+  .Filters {
+    padding: var(--l-size) 0;
+  }
+  .Filters__content {
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+}
+
+@media (min-width: 80rem) {
+  .Filters__content {
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+  }
+}

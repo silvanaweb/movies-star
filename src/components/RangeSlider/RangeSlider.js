@@ -10,21 +10,20 @@ const moods = {
 };
 
 const RangeSlider = ({
+  defaultValue = 5,
   min = 1,
   max = 10,
   step = 1,
   onValueChange = () => undefined
 }) => {
-  const [value, setValue] = React.useState(5);
+  const [value, setValue] = React.useState(defaultValue);
   const [mood, setMood] = React.useState(moods.NEUTRAL);
   const badMoodLimit = max * 0.4;
   const gooMoodLimit = max * 0.6;
 
   React.useEffect(() => {
-    console.log("value effect", typeof value, min);
     const valueN = parseFloat(value);
     if (valueN === min) {
-      console.log("minim value ", moods.BADBAD);
       setMood(moods.BADBAD);
     } else if (valueN === max) {
       setMood(moods.BLISSFUL);

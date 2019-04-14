@@ -1,19 +1,16 @@
 const mkGenresTable = genres => {
-  let defaultGenres;
+  let genresObj;
   // returns the same object after loading it the first time
   // a Hast Table allows me to easily get the genres for the movies
   return () => {
-    if (defaultGenres) {
-      return defaultGenres;
+    if (genresObj) {
+      return genresObj;
     } else {
-      defaultGenres = {};
+      genresObj = {};
       genres.forEach(({ name, id }) => {
-        defaultGenres[id] = {
-          name,
-          id
-        };
+        genresObj[id] = name;
       });
-      return defaultGenres;
+      return genresObj;
     }
   };
 };
