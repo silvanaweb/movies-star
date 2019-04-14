@@ -2,7 +2,7 @@
 
 const filtersReducerDefaultState = {
   rating: "",
-  genre: []
+  genres: []
 };
 
 export default (state = filtersReducerDefaultState, action) => {
@@ -10,7 +10,7 @@ export default (state = filtersReducerDefaultState, action) => {
     case "SET_SELECTED_GENRE":
       return {
         ...state,
-        genre: action.genre
+        genres: action.genres
       };
     case "SET_RATING":
       return {

@@ -77,7 +77,7 @@ const mapStateToProps = (state, props) => {
   };
 };
 const mapDispatchToProps = dispatch => ({
-  setSelectedGenre: genre => dispatch(setSelectedGenre(genre))
+  setSelectedGenre: genres => dispatch(setSelectedGenre(genres))
 });
 export { FilterByGenre };
 

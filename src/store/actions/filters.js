@@ -1,6 +1,6 @@
-const setSelectedGenre = genre => ({
+const setSelectedGenre = genres => ({
   type: "SET_SELECTED_GENRE",
-  genre
+  genres
 });
 const setRating = rating => ({
   type: "SET_RATING",

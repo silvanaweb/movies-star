@@ -1,4 +1,4 @@
-export default (movies, { genre, rating }) => {
+export default (movies, { genres, rating }) => {
   let filteredMovies = movies;
   // if (category) {
   //   filteredMovies = filteredMovies.filter(
@@ -11,9 +11,9 @@ export default (movies, { genre, rating }) => {
   //   );
   // }
   // filter by genre
-  if (!!genre.length) {
+  if (!!genres.length) {
     filteredMovies = filteredMovies.filter(movie =>
-      genre.every(g => movie.genres.includes(g))
+      genres.every(g => movie.genres.includes(g))
     );
   }
 

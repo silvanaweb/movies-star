@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import selectMovies from "../../store/selectors/movies";
 import FilterByGenre from "../Filters/FilterByGenre";
+import FilterByRating from "../Filters/FilterByRating";
 import "./style.css";
 
 const MoviesList = ({ movies }) => {
@@ -10,6 +11,7 @@ const MoviesList = ({ movies }) => {
     <>
       <div>
         <FilterByGenre />
+        <FilterByRating />
       </div>
       <div>
         movies list
