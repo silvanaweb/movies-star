@@ -10,6 +10,15 @@ export default (movies, { genre, rating }) => {
   //     movie.title.toLowerCase().includes(text.toLowerCase())
   //   );
   // }
+  // filter by genre
+  if (!!genre.length) {
+    filteredMovies = filteredMovies.filter(movie =>
+      genre.every(g => movie.genres.includes(g))
+    );
+  }
 
-  return filteredMovies;
+  // Sort by popularity
+  return filteredMovies.sort((a, b) => {
+    return a.popularity < b.popularity ? 1 : -1;
+  });
 };

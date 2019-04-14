@@ -1,13 +1,13 @@
 import { shallow } from "enzyme";
 import toJSON from "enzyme-to-json";
 import React from "react";
-import { Header } from "../../components/Header";
+import { Filters } from "../../components/Filters";
 
 let history, wrapper;
 
 beforeEach(() => {
   history = { push: jest.fn() };
-  wrapper = shallow(<Header history={history} />);
+  wrapper = shallow(<Filters history={history} />);
 });
 
 test("should render Header correctly", () => {

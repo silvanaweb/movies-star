@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import { setGenre } from "../../store/actions/filters";
 import selectMovies from "../../store/selectors/movies";
+import FilterByGenre from "../Filters/FilterByGenre";
 import "./style.css";
 
-const MoviesList = ({ movies, setGenre, match: { params } }) => {
-  useEffect(() => {
-    const { genre } = params;
-    setGenre(genre);
-  }, [params]);
-  console.log("movie lisr", movies);
+const MoviesList = ({ movies }) => {
+  console.log("movie LIST", movies);
   return (
     <>
+      <div>
+        <FilterByGenre />
+      </div>
       <div>
         movies list
         {/* {movies.map(({ new: newItem, title }, idx) => (
@@ -30,11 +29,4 @@ const mapStateToProps = (state, props) => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  setGenre: category => dispatch(setGenre(category))
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MoviesList);
+export default connect(mapStateToProps)(MoviesList);

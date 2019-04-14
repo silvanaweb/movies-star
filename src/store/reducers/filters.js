@@ -2,12 +2,12 @@
 
 const filtersReducerDefaultState = {
   rating: "",
-  genre: ""
+  genre: []
 };
 
 export default (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
-    case "SET_GENRE":
+    case "SET_SELECTED_GENRE":
       return {
         ...state,
         genre: action.genre
