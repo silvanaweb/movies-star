@@ -8,6 +8,7 @@ import { startSetGenres } from "./store/actions/genres";
 import { startSetMovies } from "./store/actions/movies";
 import configureStore from "./store/configureStore";
 import genresSelector from "./store/selectors/genres";
+import { Loader } from "./components/Loader/Loader"
 
 const store = configureStore();
 
@@ -17,7 +18,7 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("root"));
+ReactDOM.render(<Loader />, document.getElementById("root"));
 
 store
   .dispatch(startSetGenres())
