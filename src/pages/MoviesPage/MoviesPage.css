@@ -1,0 +1,45 @@
+.Movies__filter {
+  margin: var(--l-size) 0;
+}
+
+.Movies__ratings {
+  display: flex;
+  color: var(--teal);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Movies__ratings__value {
+  display: inline-block;
+  font-weight: bold;
+  width: 3rem;
+}
+.Movies__ratings__content {
+  text-align: center;
+}
+
+.Movies__list__empty {
+  margin-top: var(--l-size);
+  font-size: var(--font-medium);
+  text-align: center;
+}
+
+.Movies__results {
+  font-size: var(--font-normal);
+  color: var(--teal);
+  margin-top: var(--m-size);
+}
+
+@media (min-width: 600px) {
+  .Movies__ratings {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Movies__ratings__filter {
+    width: 65%;
+  }
+  .Movies__results {
+    font-size: var(--font-medium);
+  }
+}

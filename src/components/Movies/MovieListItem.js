@@ -9,9 +9,9 @@ const MovieListItem = ({ genres, title, image }) => (
     <div>
       <img src={mkImagePath(image)} alt={title} />
     </div>
-    <div>
-      <div>{title}</div>
-      <div>{genres}</div>
+    <div className="MovieList__list__item__content">
+      <h3>{title}</h3>
+      <p>{genres}</p>
     </div>
   </div>
 );

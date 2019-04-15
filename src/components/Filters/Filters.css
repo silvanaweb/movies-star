@@ -11,7 +11,7 @@
   margin-bottom: var(--s-size);
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 600px) {
   .Filters {
     padding: var(--l-size) 0;
   }
@@ -20,7 +20,7 @@
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 800px) {
   .Filters__content {
     grid-template-columns: 3fr 3fr 3fr 3fr;
   }
