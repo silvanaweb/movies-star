@@ -4,6 +4,7 @@ import selectMovies from "../../store/selectors/movies";
 import FilterByGenre from "../Filters/FilterByGenre";
 import FilterByRating from "../Filters/FilterByRating";
 import "./MovieList.css";
+import { MovieListItem } from "./MovieListItem";
 
 const MovieList = ({ movies, filters: { rating } }) => {
   console.log("movie LIST", movies);
@@ -21,11 +22,13 @@ const MovieList = ({ movies, filters: { rating } }) => {
       </div>
       {!!movies.length ? (
         <div className="MovieList__list">
-          {movies.map(({ title, genres }, idx) => (
-            <div key={`${title}${idx}`} className="MovieList__list__item">
-              <div>{title}</div>
-              <div>{genres.join(", ")}</div>
-            </div>
+          {movies.map(({ title, genres, poster_path, id }) => (
+            <MovieListItem
+              key={`${title}${id}`}
+              title={title}
+              genres={genres.join(", ")}
+              image={poster_path}
+            />
           ))}
         </div>
       ) : (

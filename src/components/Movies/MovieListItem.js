@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const MovieListItem = ({ newItem, title }) => (
-  <div>
-    <h3>
-      <Link to={`/movie/${encodeURIComponent(title)}`} className="Movie__link">
-        {title} {newItem && <span className="Movie__new">- New</span>}
-      </Link>
-    </h3>
+const mkImagePath = name => {
+  return `https://image.tmdb.org/t/p/w200/${name}`;
+};
+
+const MovieListItem = ({ genres, title, image }) => (
+  <div className="MovieList__list__item">
+    <div>
+      <img src={mkImagePath(image)} alt={title} />
+    </div>
+    <div>
+      <div>{title}</div>
+      <div>{genres}</div>
+    </div>
   </div>
 );
 
