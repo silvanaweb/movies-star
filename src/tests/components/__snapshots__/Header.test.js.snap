@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header
+  className="Header"
+>
+  <div
+    className="content-container"
+  >
+    <h1>
+      Movie Stars
+    </h1>
+  </div>
+</header>
+`;

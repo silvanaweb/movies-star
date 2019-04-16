@@ -4,11 +4,7 @@ import { setSelectedRating } from "../../store/actions/filters";
 import { RangeSlider } from "../RangeSlider/RangeSlider";
 
 // the Rating Filter is an input range
-const FilterByRating = ({
-  className,
-  setSelectedRating,
-  filters: { rating }
-}) => {
+const FilterByRating = ({ className, setSelectedRating, rating }) => {
   const onSelectedRatingChange = rating => {
     // dispatch to filters
     setSelectedRating(rating);
@@ -26,9 +22,9 @@ const FilterByRating = ({
   );
 };
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = state => {
   return {
-    filters: state.filters
+    rating: state.filters.rating
   };
 };
 const mapDispatchToProps = dispatch => ({
