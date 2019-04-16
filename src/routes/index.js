@@ -1,15 +1,24 @@
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header/Header";
 import MoviesPage from "../pages/MoviesPage/MoviesPage";
-import { NotFoundPage } from "../pages/NotFoundPage";
+import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 
 const Routes = () => (
   <>
-    <Route render={props => <Header {...props} />} />
     <Switch>
-      <Route exact={true} path="/" render={() => <Redirect to="/movies" />} />
-      <Route path="/movies" component={MoviesPage} />
+      <Route
+        exact={true}
+        path="/"
+        render={props => (
+          <>
+            <Header {...props} />
+            <MoviesPage />
+            <Footer />
+          </>
+        )}
+      />
       <Route component={NotFoundPage} />
     </Switch>
   </>
