@@ -1,15 +1,18 @@
 import { shallow } from "enzyme";
 import toJSON from "enzyme-to-json";
 import React from "react";
-import { Filters } from "../../components/Filters";
+import { FilterByRating } from "../../components/Filters/FilterByRating";
 
-let history, wrapper;
+let wrapper, setSelectedRating, rating;
 
 beforeEach(() => {
-  history = { push: jest.fn() };
-  wrapper = shallow(<Filters history={history} />);
+  setSelectedRating = jest.fn();
+  rating = 3;
+  wrapper = shallow(
+    <FilterByRating setSelectedRating={setSelectedRating} rating={rating} />
+  );
 });
 
-test("should render Header correctly", () => {
+test("should render FilterByRating correctly", () => {
   expect(toJSON(wrapper)).toMatchSnapshot();
 });

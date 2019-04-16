@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FilterByRating correctly 1`] = `
+<div
+  className=""
+>
+  <RangeSlider
+    defaultValue={3}
+    max={10}
+    min={1}
+    onValueChange={[Function]}
+    step={0.5}
+  />
+</div>
+`;
