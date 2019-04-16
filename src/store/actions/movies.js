@@ -20,7 +20,7 @@ const getListMovie = genresMap => ({
   id
 });
 
-const startSetMovies = genresMap => {
+const startSetMovies = genres => {
   return dispatch => {
     // fetch movies from DB
     return fetch(
@@ -29,7 +29,13 @@ const startSetMovies = genresMap => {
       .then(res => res.json())
       .then(data => {
         const { results } = data;
-        const movies = results.map(getListMovie(genresMap));
+        const genresMap = genres.reduce((acc, { id, name }) => ({ ...acc, [id]: name }), {});
+        // extract the needed fields from the movie object and sort by popularity
+        const movies = results
+          .map(getListMovie(genresMap))
+          .sort((a, b) => {
+            return a.popularity < b.popularity ? 1 : -1;
+          });
         dispatch(setMovies(movies));
       });
   };

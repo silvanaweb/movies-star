@@ -7,7 +7,6 @@ import * as serviceWorker from "./serviceWorker";
 import { startSetGenres } from "./store/actions/genres";
 import { startSetMovies } from "./store/actions/movies";
 import configureStore from "./store/configureStore";
-import genresSelector from "./store/selectors/genres";
 import { Loader } from "./components/Loader/Loader"
 
 const store = configureStore();
@@ -23,7 +22,7 @@ ReactDOM.render(<Loader />, document.getElementById("root"));
 store
   .dispatch(startSetGenres())
   .then(action => {
-    return store.dispatch(startSetMovies(genresSelector(action.genres)));
+    return store.dispatch(startSetMovies(action.genres));
   })
   .then(() => {
     ReactDOM.render(jsx, document.getElementById("root"));

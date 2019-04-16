@@ -13,8 +13,5 @@ export default (movies, { genres, rating }) => {
     );
   }
 
-  // Sort by popularity
-  return filteredMovies.sort((a, b) => {
-    return a.popularity < b.popularity ? 1 : -1;
-  });
+  return filteredMovies;
 };

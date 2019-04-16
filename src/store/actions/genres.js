@@ -12,7 +12,11 @@ const startSetGenres = () => {
       .then(res => res.json())
       .then(result => {
         const { genres } = result;
-        return dispatch(setGenres(genres));
+        // genres come unsorted
+        const sortedGenres = genres.sort((a, b) => {
+          return a.name > b.name ? 1 : -1;
+        });
+        return dispatch(setGenres(sortedGenres));
       });
   };
 };
