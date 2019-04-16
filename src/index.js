@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import App from "./App";
+import { Loader } from "./components/Loader/Loader";
+import { api } from "./data/api";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { startSetGenres } from "./store/actions/genres";
 import { startSetMovies } from "./store/actions/movies";
 import configureStore from "./store/configureStore";
-import { Loader } from "./components/Loader/Loader"
+
+api.config();
 
 const store = configureStore();
 
