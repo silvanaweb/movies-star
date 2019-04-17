@@ -8,6 +8,7 @@ import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
 const Routes = () => (
   <>
     <Switch>
+      {/* all the pages are eventually loaded at this point */}
       <Route
         exact={true}
         path="/"
@@ -19,6 +20,7 @@ const Routes = () => (
           </>
         )}
       />
+      {/* MUST SEEN: a COOL not found page shows up when not path is matched */}
       <Route component={NotFoundPage} />
     </Switch>
   </>

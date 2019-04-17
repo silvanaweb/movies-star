@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { setSelectedRating } from "../../store/actions/filters";
 import { RangeSlider } from "../RangeSlider/RangeSlider";
 
+// the Rating Filter is an input range
 const FilterByRating = ({
   className,
   setSelectedRating,

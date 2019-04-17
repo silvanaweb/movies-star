@@ -4,6 +4,7 @@ import { Router } from "react-router-dom";
 import "./App.css";
 import { Routes } from "./routes";
 
+// history is used for navigation
 export const history = createHistory();
 
 const App = () => (

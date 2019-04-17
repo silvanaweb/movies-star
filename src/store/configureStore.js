@@ -5,7 +5,8 @@ import genresReducer from "./reducers/genres";
 import moviesReducer from "./reducers/movies";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
+// the reducers are combined and added to the store
+// thunk is used to manage asynchronous operation, like when we fetch the data from remote
 export default () => {
   const store = createStore(
     combineReducers({

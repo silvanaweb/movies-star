@@ -11,7 +11,7 @@ const startSetGenres = () => {
     return api
       .getGenres()
       .then(genres => {
-        // sort genres that come unsorted
+        // sort genres because they arrive unsorted
         const sortedGenres = genres.sort((a, b) => {
           return a.name > b.name ? 1 : -1;
         });

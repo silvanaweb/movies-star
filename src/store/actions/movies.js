@@ -6,16 +6,17 @@ const setMovies = movies => ({
   movies
 });
 
+// genres are mapped in the genres list of the movie,
+// this  facilitates the viewving of the genres
+// (alternatively this mapping could be done before rendering, but because the list does not change, it makes sense doing it here)
 const getListMovie = genresMap => ({
-  popularity,
   vote_average,
   title,
   genre_ids,
   poster_path,
   id
 }) => ({
-  popularity,
-  vote_average,
+  rating: vote_average,
   title,
   genres: genre_ids.map(gid => genresMap[gid]),
   poster_path,
@@ -32,10 +33,14 @@ const startSetMovies = genres => {
           (acc, { id, name }) => ({ ...acc, [id]: name }),
           {}
         );
-        // extract the needed fields from the movie object and sort by popularity
-        const movies = moviesRaw.map(getListMovie(genresMap)).sort((a, b) => {
-          return a.popularity < b.popularity ? 1 : -1;
-        });
+        // sort the moives by popularity. this operation is performed here rather than in the selector
+        // because it is supposed to be the default and only sorting operation
+        // extract the required fields from the movie object (do not need to fill up the memory with unused info)
+        const movies = moviesRaw
+          .sort((a, b) => {
+            return a.popularity < b.popularity ? 1 : -1;
+          })
+          .map(getListMovie(genresMap));
         dispatch(setMovies(movies));
       })
       .catch(error => {

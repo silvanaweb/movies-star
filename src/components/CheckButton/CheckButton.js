@@ -1,6 +1,7 @@
 import React from "react";
 import "./CheckButton.css";
 
+// check button is used for the genre filtering
 export const CheckButton = ({
   checked,
   name,

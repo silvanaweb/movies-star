@@ -4,6 +4,8 @@ import { setSelectedGenre } from "../../store/actions/filters";
 import { CheckButton } from "../CheckButton/CheckButton";
 import "./Filters.css";
 
+// in order to filter by genre, a state hook is used and a Set
+// a Set has the property to not have duplicates and to easily add and remove items
 const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
   const [selectedGenres, setSelectedGenres] = useState(new Set());
 
@@ -21,7 +23,10 @@ const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
     } else {
       selectedGenres.delete(name);
     }
+    // a new Set must be created so that selectedGenres is actually updated
     setSelectedGenres(new Set(selectedGenres));
+    // after the state selectedGenres is updated,
+    // the useEffect is called and there is where we call the action to set the filter  and then the filtered movies are updated
   };
 
   return (
@@ -44,11 +49,13 @@ const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
   );
 };
 
+// map the state to props to get the genres list
 const mapStateToProps = (state, props) => {
   return {
     allgenres: state.genres
   };
 };
+// map the actions to props so that they can be called inside the component
 const mapDispatchToProps = dispatch => ({
   setSelectedGenreFilter: genres => dispatch(setSelectedGenre(genres))
 });

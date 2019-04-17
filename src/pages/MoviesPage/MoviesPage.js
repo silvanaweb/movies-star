@@ -6,6 +6,7 @@ import { MovieList } from "../../components/Movies/MovieList";
 import selectMovies from "../../store/selectors/movies";
 import "./MoviesPage.css";
 
+// in this page movies and filters are shown, they are organised in their own components
 const MoviesPage = ({ movieList }) => {
   return (
     <>
@@ -31,6 +32,8 @@ const MoviesPage = ({ movieList }) => {
   );
 };
 
+// here we fetch the movie list using the selector and push it into the components props
+// using the HOC feature (in this case it is the Redux connect)
 const mapStateToProps = (state, props) => {
   return {
     movieList: selectMovies(state.movies, state.filters)

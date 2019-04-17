@@ -1,6 +1,10 @@
 let API_KEY = "";
 let REACT_APP_API_URL = "";
 
+// here is where i call the apis to fetch the data
+// the connection paramaters are stored in an .env file in development and test
+// (the parameters are loaded via webpack automatically if their names are prefixed with REACT_APP)
+// in production the enviroment variables are setup on the Node server (Heroku in my example)
 const api = {
   config() {
     API_KEY = process.env.REACT_APP_API_KEY;

@@ -1,10 +1,9 @@
+// the selector is used to format and filter data
 export default (movies, { genres, rating }) => {
   let filteredMovies = movies;
 
   if (!!rating) {
-    filteredMovies = filteredMovies.filter(
-      movie => movie.vote_average >= rating
-    );
+    filteredMovies = filteredMovies.filter(movie => movie.rating >= rating);
   }
 
   if (!!genres.length) {
