@@ -9,18 +9,26 @@
   width: 100%;
 }
 .MovieList__list__item {
-  display: grid;
-  grid-template-columns: 6fr 6fr;
-  grid-column-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
   padding: 2rem;
 }
 .MovieList__list__item:nth-child(even) {
-  background-color: var(--teal-ligther);
+  background-color: var(--light-grey);
+  flex-direction: row-reverse;
 }
 
 .MovieList__list__item__content p {
-  margin-top: var(--m-size);
   line-height: 2;
+  margin-top: var(--m-size);
+}
+
+.MovieList__list__item__content {
+  margin-left: 1rem;
+  flex-basis: 50%;
+}
+.MovieList__list__item:nth-child(even) .MovieList__list__item__content {
+  margin: 0 1rem 0 0;
 }
 
 @media (min-width: 600px) {

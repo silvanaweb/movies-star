@@ -6,18 +6,13 @@ import { MovieList } from "../../components/Movies/MovieList";
 import selectMovies from "../../store/selectors/movies";
 import "./MoviesPage.css";
 
-const MoviesPage = ({ movieList, filters: { rating } }) => {
-  console.log("movie LIST", movieList);
+const MoviesPage = ({ movieList }) => {
   return (
     <>
       <div className="content-container">
         <FilterByGenre />
         <div className="Movies__ratings">
           <FilterByRating className="Movies__ratings__filter" />{" "}
-          <div className="Movies__ratings__content">
-            The best movies rated from{" "}
-            <span className="Movies__ratings__value">{rating}</span>
-          </div>
         </div>
       </div>
       <div className="content-container">
@@ -38,8 +33,7 @@ const MoviesPage = ({ movieList, filters: { rating } }) => {
 
 const mapStateToProps = (state, props) => {
   return {
-    movieList: selectMovies(state.movies, state.filters),
-    filters: state.filters
+    movieList: selectMovies(state.movies, state.filters)
   };
 };
 

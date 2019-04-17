@@ -1,29 +1,29 @@
 .NotFoundPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: black;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  justify-content: center;
+  width: 100vw;
 }
 
 .NotFoundPageGif {
-  width: 90%;
-  height: 300px;
-  margin-top: 2rem;
   background-image: url(https://media.giphy.com/media/uLFLLXMajtNIc/giphy.gif);
+  background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: center;
-  border-top: 15px solid white;
   border-bottom: 15px solid white;
+  border-top: 15px solid white;
+  height: 300px;
+  margin-top: 2rem;
+  width: 90%;
 }
 
 @media (min-width: 600px) {
   .NotFoundPageGif {
-    width: 479px;
-    height: 412px;
     background-size: auto;
+    height: 412px;
+    width: 479px;
   }
 }

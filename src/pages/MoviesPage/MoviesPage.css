@@ -2,20 +2,8 @@
   margin: var(--l-size) 0;
 }
 
-.Movies__ratings {
-  display: flex;
-  color: var(--teal);
-  flex-direction: column;
-  justify-content: center;
-}
-
-.Movies__ratings__value {
-  display: inline-block;
-  font-weight: bold;
-  width: 3rem;
-}
-.Movies__ratings__content {
-  text-align: center;
+.Movies__ratings__filter {
+  margin: 0 auto;
 }
 
 .Movies__list__empty {

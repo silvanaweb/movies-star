@@ -1,0 +1,13 @@
+.CheckButton {
+  background-color: var(--light-grey);
+  border-radius: 26px;
+  border: none;
+  color: var(--teal);
+  font-size: 1.6rem;
+  padding: var(--s-size) var(--l-size);
+}
+
+.CheckButton--checked {
+  color: var(--light-grey);
+  background-color: var(--teal);
+}

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { setSelectedGenre } from "../../store/actions/filters";
-import { Checkbox } from "../Checkbox/Checkbox";
+import { CheckButton } from "../CheckButton/CheckButton";
 import "./Filters.css";
 
 const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
@@ -15,25 +15,22 @@ const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
     }
   }, [selectedGenres]);
 
-  const onSelectedGenre = e => {
-    const checked = e.target.checked;
-    const name = e.target.name;
+  const onSelectedGenre = ({ name, checked }) => {
     if (checked) {
-      selectedGenres.add(name)
+      selectedGenres.add(name);
     } else {
-      selectedGenres.delete(name)
+      selectedGenres.delete(name);
     }
-
     setSelectedGenres(new Set(selectedGenres));
   };
 
   return (
-    <div className="Filters">
+    <div className="Filters__genre">
       <div className="content-container">
-        <div className="Filters__content">
+        <div className="Filters__genre__content">
           {allgenres.map(genre => (
-            <div key={genre.id} className="Filters__genre">
-              <Checkbox
+            <div key={genre.id} className="Filters__genre__item">
+              <CheckButton
                 title={genre.name}
                 name={genre.name}
                 checked={selectedGenres.has(genre.name)}
@@ -45,7 +42,7 @@ const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
       </div>
     </div>
   );
-}
+};
 
 const mapStateToProps = (state, props) => {
   return {

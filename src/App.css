@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 :root {
   --dark-grey: #333333;
   --teal: #026565;
-  --teal-ligther: #afd1d1;
+  --teal-lighter: #afd1d1;
+  --light-grey: #dae2e2;
   /* font */
   --font-normal: 1.6rem;
   --font-medium: 2.5rem;
@@ -30,7 +31,7 @@ html {
 body {
   background-color: #f3f3f3;
   color: var(--dark-grey);
-  font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   font-size: var(--font-normal);
   line-height: 1.6;
 }

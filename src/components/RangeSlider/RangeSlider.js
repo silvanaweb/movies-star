@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RangeSlider.css";
 
 const moods = {
@@ -16,12 +16,15 @@ const RangeSlider = ({
   step = 1,
   onValueChange = () => undefined
 }) => {
-  const [value, setValue] = React.useState(defaultValue);
-  const [mood, setMood] = React.useState(moods.NEUTRAL);
+  const [value, setValue] = useState(`${defaultValue}`);
+  const [mood, setMood] = useState(moods.NEUTRAL);
+  const [tooltipPos, setTooltipPos] = useState(-1);
+  const [showTooltip, setShowtooltip] = useState(false);
   const badMoodLimit = max * 0.4;
   const gooMoodLimit = max * 0.6;
+  const inputRef = React.createRef();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const valueN = parseFloat(value);
     if (valueN === min) {
       setMood(moods.BADBAD);
@@ -34,26 +37,57 @@ const RangeSlider = ({
     } else {
       setMood(moods.NEUTRAL);
     }
+    mkToolTip(valueN);
     onValueChange(valueN);
   }, [value]);
 
+  useEffect(() => {
+    let timeTT;
+    if (tooltipPos > 0) {
+      timeTT && clearTimeout(timeTT);
+      setShowtooltip(true);
+      timeTT = setTimeout(() => {
+        setShowtooltip(false);
+      }, 2000);
+    }
+  }, [tooltipPos]);
+
+  const mkToolTip = valueN => {
+    const inputWidth = inputRef.current.offsetWidth;
+    const pos = ((inputWidth * (valueN - min)) / (max - min)) * 0.9;
+    setTooltipPos(pos);
+  };
+
   const onChangeRange = e => {
     const { value } = e.target;
-
     setValue(value);
   };
+
+  const animateTooltip = (show, pos) => ({
+    opacity: show ? 1 : 0,
+    left: pos
+  });
+
   return (
     <div className="RangeSlider">
       <div className="RangeSlider__side">{min}</div>
-      <div>
+      <div className="RangeSlider__center">
+        <div
+          className="RangeSlider__tooltip"
+          style={animateTooltip(showTooltip, tooltipPos)}
+        >
+          {value}
+        </div>
+
         <input
-          type="range"
-          min={min}
-          max={max}
-          step={step}
-          value={value}
-          onChange={onChangeRange}
           className={`RangeSlider__input slider--${mood}`}
+          max={max}
+          min={min}
+          onChange={onChangeRange}
+          ref={inputRef}
+          step={step}
+          type="range"
+          value={value}
         />
       </div>
       <div className="RangeSlider__side">{max}</div>
