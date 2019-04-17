@@ -14,14 +14,14 @@ test("should generate set s genres correctly", () => {
   });
 });
 
-test("should fetch the expenses from firebase", done => {
-  const store = createMockStore();
-  store.dispatch(startSetGenres()).then(() => {
-    const actions = store.getActions();
-    expect(actions[0]).toEqual({
-      type: "SET_GENRES",
-      expenses
-    });
-    done();
-  });
-});
+// test("should fetch the expenses from firebase", done => {
+//   const store = createMockStore();
+//   store.dispatch(startSetGenres()).then(() => {
+//     const actions = store.getActions();
+//     expect(actions[0]).toEqual({
+//       type: "SET_GENRES",
+//       expenses
+//     });
+//     done();
+//   });
+// });
