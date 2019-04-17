@@ -8,13 +8,18 @@ const setGenres = genres => ({
 const startSetGenres = () => {
   return dispatch => {
     // fetch movies from DB
-    return api.getGenres().then(genres => {
-      // sort genres that come unsorted
-      const sortedGenres = genres.sort((a, b) => {
-        return a.name > b.name ? 1 : -1;
+    return api
+      .getGenres()
+      .then(genres => {
+        // sort genres that come unsorted
+        const sortedGenres = genres.sort((a, b) => {
+          return a.name > b.name ? 1 : -1;
+        });
+        return dispatch(setGenres(sortedGenres));
+      })
+      .catch(error => {
+        throw new Error(error);
       });
-      return dispatch(setGenres(sortedGenres));
-    });
   };
 };
 

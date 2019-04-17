@@ -13,7 +13,12 @@ const api = {
     );
     const data = await response.json();
     const { results } = data;
-    return results;
+    if (results && !!results.length) {
+      return results;
+    } else {
+      const { status_message } = data;
+      throw new Error(`[Fetch MOvies] ${status_message}`);
+    }
   },
   async getGenres() {
     let response = await fetch(
@@ -21,7 +26,12 @@ const api = {
     );
     const data = await response.json();
     const { genres } = data;
-    return genres;
+    if (genres && !!genres.length) {
+      return genres;
+    } else {
+      const { status_message } = data;
+      throw new Error(`[Fetch Genres] ${status_message}`);
+    }
   }
 };
 

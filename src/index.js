@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import App from "./App";
 import { Loader } from "./components/Loader/Loader";
 import { api } from "./data/api";
+import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
 import * as serviceWorker from "./serviceWorker";
 import { startSetGenres } from "./store/actions/genres";
 import { startSetMovies } from "./store/actions/movies";
@@ -28,6 +29,13 @@ store
   })
   .then(() => {
     ReactDOM.render(jsx, document.getElementById("root"));
+  })
+  .catch(error => {
+    ReactDOM.render(
+      <ErrorPage errorMessage="Something went wrong, please try again later" />,
+      document.getElementById("root")
+    );
+    console.error("[Loading Movies and Genres]", error);
   });
 
 // If you want your app to work offline and load faster, you can change

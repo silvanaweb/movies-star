@@ -25,17 +25,22 @@ const getListMovie = genresMap => ({
 const startSetMovies = genres => {
   return dispatch => {
     // fetch movies from DB
-    return api.getMovies().then(moviesRaw => {
-      const genresMap = genres.reduce(
-        (acc, { id, name }) => ({ ...acc, [id]: name }),
-        {}
-      );
-      // extract the needed fields from the movie object and sort by popularity
-      const movies = moviesRaw.map(getListMovie(genresMap)).sort((a, b) => {
-        return a.popularity < b.popularity ? 1 : -1;
+    return api
+      .getMovies()
+      .then(moviesRaw => {
+        const genresMap = genres.reduce(
+          (acc, { id, name }) => ({ ...acc, [id]: name }),
+          {}
+        );
+        // extract the needed fields from the movie object and sort by popularity
+        const movies = moviesRaw.map(getListMovie(genresMap)).sort((a, b) => {
+          return a.popularity < b.popularity ? 1 : -1;
+        });
+        dispatch(setMovies(movies));
+      })
+      .catch(error => {
+        throw new Error(error);
       });
-      dispatch(setMovies(movies));
-    });
   };
 };
 
