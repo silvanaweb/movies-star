@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Loader correctly 1`] = `
+<div
+  className="Loader"
+>
+  <ul
+    className="Loader__list"
+  >
+    <li />
+    <li />
+    <li />
+    <li />
+    <li />
+  </ul>
+</div>
+`;
