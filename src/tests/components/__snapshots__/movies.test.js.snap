@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render MovieList correctly with empty list 1`] = `
+<div
+  className="MovieList__list"
+/>
+`;
+
+exports[`should render MovieList correctly with movies list 1`] = `
+<div
+  className="MovieList__list"
+>
+  <MovieListItem
+    genres="Action, Adventure"
+    image="image.jpg"
+    index={0}
+    key="The Last Bender1"
+    title="The Last Bender"
+  />
+  <MovieListItem
+    genres="Action"
+    image="image.jpg"
+    index={1}
+    key="Forrest Gump2"
+    title="Forrest Gump"
+  />
+  <MovieListItem
+    genres="Adventure, Animation"
+    image="image.jpg"
+    index={2}
+    key="Shrek2"
+    title="Shrek"
+  />
+</div>
+`;
+
+exports[`should render MovieListItem correctly 1`] = `
+<div
+  className="MovieList__list__item"
+  style={
+    Object {
+      "opacity": 0,
+    }
+  }
+>
+  <div
+    className="MovieList__list__item__image"
+  >
+    <img
+      alt="Howl's moving castle"
+      src="https://image.tmdb.org/t/p/w200/image.jpg"
+    />
+  </div>
+  <div
+    className="MovieList__list__item__content"
+  >
+    <h3>
+      Howl's moving castle
+    </h3>
+    <p>
+      Action,Animation
+    </p>
+  </div>
+</div>
+`;

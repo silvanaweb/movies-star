@@ -6,7 +6,7 @@ const mkImagePath = name => {
 
 // this component rendere the single movie item
 // the show state allows to render a simple animation (diffenrently from Angular, React does not offer a built-in animation library)
-const MovieListItem = ({ genres, title, image, index }) => {
+const MovieListItem = ({ genres, image, index, title }) => {
 	const [show, setShow] = React.useState(false);
 
 	React.useEffect(() => {
