@@ -1,13 +1,13 @@
 .Filters__genre {
-  padding: var(--l-size) 0;
+	padding: var(--l-size) 0;
 }
 
 .Filters__genre__content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .Filters__genre__item {
-  margin-bottom: var(--s-size);
+	margin: 0 0.4rem 0.8rem;
 }

@@ -1,94 +1,95 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 :root {
-  --dark-grey: #333333;
-  --teal: #026565;
-  --teal-lighter: #afd1d1;
-  --light-grey: #dae2e2;
-  /* font */
-  --font-normal: 1.6rem;
-  --font-medium: 2.5rem;
-  /* sizes */
-  --s-size: 1.2rem;
-  --m-size: 1.6rem;
-  --l-size: 3.2rem;
-  --xl-size: 4.8rem;
-  /* media */
-  --tablet-breakpoint: 600px;
-  --desktop-breakpoint: 800px;
+	--dark-grey: #333333;
+	--teal: #026565;
+	--teal-lighter: #afd1d1;
+	--light-grey: #dae2e2;
+	/* font */
+	--font-normal: 1.6rem;
+	--font-medium: 2.5rem;
+	/* sizes */
+	--s-size: 1.2rem;
+	--m-size: 1.6rem;
+	--xm-size: 2.4rem;
+	--l-size: 3.2rem;
+	--xl-size: 4.8rem;
+	/* media */
+	--tablet-breakpoint: 600px;
+	--desktop-breakpoint: 800px;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  background-color: #f3f3f3;
-  color: var(--dark-grey);
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-size: var(--font-normal);
-  line-height: 1.6;
+	background-color: #f3f3f3;
+	color: var(--dark-grey);
+	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+	font-size: var(--font-normal);
+	line-height: 1.6;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 button:disabled {
-  cursor: default;
+	cursor: default;
 }
 
 .content-container {
-  margin: 0 auto;
-  padding: 0 var(--s-size);
+	margin: 0 auto;
+	padding: 0 var(--s-size);
 }
 
 @media (min-width: 600px) {
-  .content-container {
-    padding: 0 var(--m-size);
-    max-width: 80rem;
-  }
+	.content-container {
+		padding: 0 var(--m-size);
+		max-width: 80rem;
+	}
 }
 
 @media (min-width: 800px) {
-  .content-container {
-    padding: 0 var(--m-size);
-    max-width: 100rem;
-  }
+	.content-container {
+		padding: 0 var(--m-size);
+		max-width: 100rem;
+	}
 }
 
 .Input {
-  padding: 1rem;
-  font-size: 1.6rem;
+	padding: 1rem;
+	font-size: 1.6rem;
 }
 
 .Input--number {
-  max-width: 6rem;
+	max-width: 6rem;
 }
 
 .Button {
-  background-color: var(--teal);
-  border: none;
-  color: white;
-  font-size: 1.6rem;
-  padding: var(--s-size);
+	background-color: var(--teal);
+	border: none;
+	color: white;
+	font-size: 1.6rem;
+	padding: var(--s-size);
 }
 .Button--neutral {
-  background-color: transparent;
-  border: none;
+	background-color: transparent;
+	border: none;
 }
 
 .Button--link {
-  background-color: transparent;
-  border: none;
-  color: var(--teal);
-  display: inline;
-  font-size: var(--m-size);
-  padding: 0;
+	background-color: transparent;
+	border: none;
+	color: var(--teal);
+	display: inline;
+	font-size: var(--m-size);
+	padding: 0;
 }
