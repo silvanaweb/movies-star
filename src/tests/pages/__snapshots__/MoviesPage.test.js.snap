@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle onGoToHome correctly with movies list 1`] = `
+<div>
+  <div
+    className="content-container"
+  >
+    <ConnectFunction />
+    <div
+      className="Movies__ratings"
+    >
+      <ConnectFunction
+        className="Movies__ratings__filter"
+      />
+       
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div>
+      <p
+        className="Movies__results"
+      >
+        You have found 
+        3
+         movies
+      </p>
+      <MovieList
+        movies={
+          Array [
+            Object {
+              "genres": Array [
+                "Action",
+                "Adventure",
+              ],
+              "id": 1,
+              "poster_path": "image.jpg",
+              "rating": 7,
+              "title": "The Last Bender",
+            },
+            Object {
+              "genres": Array [
+                "Action",
+              ],
+              "id": 2,
+              "poster_path": "image.jpg",
+              "rating": 8,
+              "title": "Forrest Gump",
+            },
+            Object {
+              "genres": Array [
+                "Adventure",
+                "Animation",
+              ],
+              "id": 2,
+              "poster_path": "image.jpg",
+              "rating": 5,
+              "title": "Shrek",
+            },
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render NotFoundPage correctly with empty list 1`] = `
+<div>
+  <div
+    className="content-container"
+  >
+    <ConnectFunction />
+    <div
+      className="Movies__ratings"
+    >
+      <ConnectFunction
+        className="Movies__ratings__filter"
+      />
+       
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="Movies__list__empty"
+    >
+      No movies available
+    </div>
+  </div>
+</div>
+`;
