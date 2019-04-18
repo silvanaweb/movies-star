@@ -1,64 +1,67 @@
 .MovieList__list {
-  margin-top: var(--m-size);
+	margin-top: var(--m-size);
 }
 
 .MovieList__list__item {
-  padding: 1rem;
+	padding: 1rem;
 }
 .MovieList__list__item img {
-  width: 100%;
+	width: 100%;
 }
 .MovieList__list__item {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
 }
 .MovieList__list__item:nth-child(even) {
-  background-color: var(--light-grey);
-  flex-direction: row-reverse;
+	background-color: var(--light-grey);
+	flex-direction: row-reverse;
 }
 
 .MovieList__list__item__content p {
-  line-height: 2;
-  margin-top: var(--m-size);
+	line-height: 2;
+	margin-top: var(--m-size);
 }
 
 .MovieList__list__item__content {
-  margin-left: 1rem;
-  flex-basis: 50%;
+	margin-left: 1rem;
+	flex-basis: 50%;
+}
+.MovieList__list__item__image {
+	flex-basis: 50%;
 }
 .MovieList__list__item:nth-child(even) .MovieList__list__item__content {
-  margin: 0 1rem 0 0;
+	margin: 0 1rem 0 0;
 }
 
 @media (min-width: 600px) {
-  .MovieList__list {
-    display: grid;
-    grid-template-columns: 6fr 6fr;
-    grid-column-gap: 3rem;
-    grid-row-gap: 1rem;
-  }
-  .MovieList__list__item {
-    display: block;
-    border-radius: 2px;
-    box-shadow: 0 0 1px 2px var(--teal);
-    transition: opacity 200ms ease-in-out;
-  }
-  .MovieList__list__item:nth-child(even) {
-    background-color: transparent;
-  }
-  .MovieList__list__item__content p {
-    margin-top: var(--s-size);
-    line-height: 2;
-  }
+	.MovieList__list {
+		display: grid;
+		grid-template-columns: 6fr 6fr;
+		grid-column-gap: 3rem;
+		grid-row-gap: 1rem;
+	}
+	.MovieList__list__item {
+		display: block;
+		border-radius: 2px;
+		box-shadow: 0 0 1px 2px var(--teal);
+		transition: opacity 200ms ease-in-out;
+	}
+	.MovieList__list__item:nth-child(even) {
+		background-color: transparent;
+	}
+	.MovieList__list__item__content p {
+		margin-top: var(--s-size);
+		line-height: 2;
+	}
 }
 @media (min-width: 800px) {
-  .MovieList__list {
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-column-gap: 3rem;
-    grid-row-gap: 1rem;
-  }
-  .MovieList__list__item {
-    padding: 2rem;
-  }
+	.MovieList__list {
+		grid-template-columns: 4fr 4fr 4fr;
+		grid-column-gap: 3rem;
+		grid-row-gap: 1rem;
+	}
+	.MovieList__list__item {
+		padding: 2rem;
+	}
 }

@@ -4,10 +4,10 @@ import "./CheckButton.css";
 // check button is used for the genre filtering
 export const CheckButton = ({
   checked,
+  className = "",
   name,
   onChange,
-  title,
-  className = ""
+  title
 }) => {
   const onHandleChange = e => {
     e.stopPropagation();
