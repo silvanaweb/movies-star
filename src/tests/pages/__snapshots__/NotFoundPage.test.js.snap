@@ -2,23 +2,36 @@
 
 exports[`should render NotFoundPage correctly 1`] = `
 <div
-  className="content-container"
+  className="NotFoundPage"
 >
   <div
     style={
       Object {
-        "margin": "3rem auto",
+        "color": "white",
+        "fontSize": "2.8rem",
+        "opacity": 0,
+        "transition": "opacity 300ms",
       }
     }
   >
-    Page Not Found -
+    <span>
+      Got lost, huh?
+    </span>
      
-    <button
-      className="Button--link"
-      onClick={[Function]}
+    <Link
+      style={
+        Object {
+          "color": "white",
+          "fontSize": "2.8rem",
+        }
+      }
+      to="/"
     >
-      Go home
-    </button>
+      Find your way home =&gt;
+    </Link>
   </div>
+  <div
+    className="NotFoundPageGif"
+  />
 </div>
 `;

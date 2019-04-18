@@ -1,20 +1,19 @@
 import { shallow } from "enzyme";
 import toJSON from "enzyme-to-json";
 import React from "react";
-import { NotFoundPage } from "../../pages/NotFoundPage";
+import { NotFoundPage } from "../../pages/NotFoundPage/NotFoundPage";
 
-let wrapper, history;
+let wrapper;
 
 beforeEach(() => {
-  history = { push: jest.fn() };
-  wrapper = shallow(<NotFoundPage history={history} />);
+	wrapper = shallow(<NotFoundPage />);
 });
 
 test("should render NotFoundPage correctly", () => {
-  expect(toJSON(wrapper)).toMatchSnapshot();
+	expect(toJSON(wrapper)).toMatchSnapshot();
 });
 
 test("should handle onGoToHome correctly", () => {
-  wrapper.find("button").simulate("click");
-  expect(history.push).toHaveBeenLastCalledWith("/");
+	const to = wrapper.find("Link").prop("to");
+	expect(to).toBe("/");
 });
