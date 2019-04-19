@@ -1,95 +1,95 @@
 .RangeSlider {
-  border-radius: 2px;
-  display: grid;
-  grid-column-gap: 1rem;
-  grid-template-columns: 3rem auto 3rem;
-  padding: 2rem;
-  width: 100%;
+	border-radius: 2px;
+	display: grid;
+	grid-column-gap: 1rem;
+	grid-template-columns: 3rem auto 3rem;
+	padding: 2rem;
+	width: 100%;
 }
 
 .RangeSlider__center {
-  position: relative;
+	position: relative;
 }
 
 .RangeSlider__tooltip {
-  color: var(--teal);
-  font-weight: bold;
-  position: absolute;
-  text-align: center;
-  top: -36px;
-  transition: opacity 200ms ease-in-out;
-  width: var(--xl-size);
+	color: var(--teal);
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	top: -36px;
+	transition: opacity 200ms ease-in-out;
+	width: 100%;
 }
 
 .RangeSlider__side {
-  color: var(--teal);
-  font-size: var(--font-medium);
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
+	color: var(--teal);
+	font-size: var(--font-medium);
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
 }
 
 .RangeSlider__input {
-  -webkit-appearance: none;
-  -webkit-transition: 0.2s;
-  background: var(--teal);
-  border-radius: 5px;
-  height: 12px;
-  opacity: 0.7;
-  outline: none;
-  transition: opacity 0.2s;
-  width: 100%;
+	-webkit-appearance: none;
+	-webkit-transition: 0.2s;
+	background: var(--teal);
+	border-radius: 5px;
+	height: 12px;
+	opacity: 0.7;
+	outline: none;
+	transition: opacity 0.2s;
+	width: 100%;
 }
 
 .RangeSlider__input:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 .RangeSlider__input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: var(--teal-lighter);
-  border-radius: 50%;
-  border: 4px solid var(--teal);
-  cursor: pointer;
-  height: var(--xl-size);
-  width: var(--xl-size);
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: var(--teal-lighter);
+	border-radius: 50%;
+	border: 4px solid var(--teal);
+	cursor: pointer;
+	height: var(--xl-size);
+	width: var(--xl-size);
 }
 
 .RangeSlider__input::-moz-range-thumb {
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
-  height: var(--xl-size);
-  width: var(--xl-size);
+	border-radius: 50%;
+	border: 0;
+	cursor: pointer;
+	height: var(--xl-size);
+	width: var(--xl-size);
 }
 .RangeSlider__input.slider--neutral::-webkit-slider-thumb {
-  background-image: url("../../assets/images/neutral-face.svg");
+	background-image: url("../../assets/images/neutral-face.svg");
 }
 .RangeSlider__input.slider--bad::-webkit-slider-thumb {
-  background-image: url("../../assets/images/bad-face.svg");
+	background-image: url("../../assets/images/bad-face.svg");
 }
 .RangeSlider__input.slider--good::-webkit-slider-thumb {
-  background-image: url("../../assets/images/good-face.svg");
+	background-image: url("../../assets/images/good-face.svg");
 }
 .RangeSlider__input.slider--very-bad::-webkit-slider-thumb {
-  background-image: url("../../assets/images/very-bad-face.svg");
+	background-image: url("../../assets/images/very-bad-face.svg");
 }
 .RangeSlider__input.slider--blissful::-webkit-slider-thumb {
-  background-image: url("../../assets/images/blissful-face.svg");
+	background-image: url("../../assets/images/blissful-face.svg");
 }
 .RangeSlider__input.slider--neutral::-moz-range-thumb {
-  background: white url("../../assets/images/neutral-face.svg");
+	background: white url("../../assets/images/neutral-face.svg");
 }
 .RangeSlider__input.slider--bad::-moz-range-thumb {
-  background: white url("../../assets/images/bad-face.svg");
+	background: white url("../../assets/images/bad-face.svg");
 }
 .RangeSlider__input.slider--good::-moz-range-thumb {
-  background: white url("../../assets/images/good-face.svg");
+	background: white url("../../assets/images/good-face.svg");
 }
 .RangeSlider__input.slider--very-bad::-moz-range-thumb {
-  background: white url("../../assets/images/very-bad-face.svg");
+	background: white url("../../assets/images/very-bad-face.svg");
 }
 .RangeSlider__input.slider--blissful::-moz-range-thumb {
-  background: white url("../../assets/images/blissful-face.svg");
+	background: white url("../../assets/images/blissful-face.svg");
 }
