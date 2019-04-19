@@ -6,7 +6,7 @@ const createMockStore = configureMockStore([thunk]);
 import { orderBy } from "lodash";
 import { api } from "../../mockdb";
 
-test("should generate set s genres correctly", () => {
+test("should generate set genres correctly", () => {
 	const action = setGenres(genres);
 	expect(action).toEqual({
 		type: "SET_GENRES",
@@ -14,7 +14,7 @@ test("should generate set s genres correctly", () => {
 	});
 });
 
-test("should fetch the expenses from database", done => {
+test("should fetch the genres from database", done => {
 	const store = createMockStore();
 	store.dispatch(startSetGenres(api)).then(() => {
 		const actions = store.getActions();

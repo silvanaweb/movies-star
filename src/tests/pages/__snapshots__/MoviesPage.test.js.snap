@@ -32,16 +32,6 @@ exports[`should handle onGoToHome correctly with movies list 1`] = `
             Object {
               "genres": Array [
                 "Action",
-                "Adventure",
-              ],
-              "id": 1,
-              "poster_path": "image.jpg",
-              "rating": 7,
-              "title": "The Last Bender",
-            },
-            Object {
-              "genres": Array [
-                "Action",
               ],
               "id": 2,
               "poster_path": "image.jpg",
@@ -50,13 +40,23 @@ exports[`should handle onGoToHome correctly with movies list 1`] = `
             },
             Object {
               "genres": Array [
-                "Adventure",
                 "Animation",
+                "Adventure",
               ],
-              "id": 2,
+              "id": 3,
               "poster_path": "image.jpg",
               "rating": 5,
               "title": "Shrek",
+            },
+            Object {
+              "genres": Array [
+                "Action",
+                "Adventure",
+              ],
+              "id": 1,
+              "poster_path": "image.jpg",
+              "rating": 7,
+              "title": "The Last Bender",
             },
           ]
         }

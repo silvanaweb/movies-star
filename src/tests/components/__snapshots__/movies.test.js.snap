@@ -11,25 +11,25 @@ exports[`should render MovieList correctly with movies list 1`] = `
   className="MovieList__list"
 >
   <MovieListItem
-    genres="Action, Adventure"
-    image="image.jpg"
-    index={0}
-    key="The Last Bender1"
-    title="The Last Bender"
-  />
-  <MovieListItem
     genres="Action"
     image="image.jpg"
-    index={1}
+    index={0}
     key="Forrest Gump2"
     title="Forrest Gump"
   />
   <MovieListItem
-    genres="Adventure, Animation"
+    genres="Animation, Adventure"
+    image="image.jpg"
+    index={1}
+    key="Shrek3"
+    title="Shrek"
+  />
+  <MovieListItem
+    genres="Action, Adventure"
     image="image.jpg"
     index={2}
-    key="Shrek2"
-    title="Shrek"
+    key="The Last Bender1"
+    title="The Last Bender"
   />
 </div>
 `;
