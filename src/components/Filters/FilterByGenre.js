@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { setSelectedGenre } from "../../store/actions/filters";
 import { CheckButton } from "../CheckButton/CheckButton";
 import Select from "react-select";
+import { useWindowSize } from ".././../hooks/useWindowSize";
 import "./Filters.css";
 
 const mapToSelectValue = value => ({
@@ -12,21 +13,12 @@ const mapToSelectValue = value => ({
 
 const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
 	const [selectedGenres, setSelectedGenres] = useState([]);
-	const [winWidth, setWinWidth] = useState(window.innerWidth);
+	const winSize = useWindowSize();
 
 	useEffect(() => {
-		const handleResize = () => setWinWidth(window.innerWidth);
-		window.addEventListener("resize", handleResize);
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
-
-	useEffect(() => {
-		const selectedGenresArr = Array.from(selectedGenres);
 		// pass the genres to the filter state
-		if (selectedGenresArr) {
-			setSelectedGenreFilter(selectedGenresArr);
+		if (selectedGenres) {
+			setSelectedGenreFilter(selectedGenres);
 		}
 	}, [selectedGenres]);
 
@@ -47,7 +39,7 @@ const FilterByGenre = ({ allgenres, setSelectedGenreFilter }) => {
 	return (
 		<div className="Filters__genre">
 			<div className="content-container">
-				{winWidth < 600 ? (
+				{winSize.width < 600 ? (
 					<div className="Filters__genre__content__mobile">
 						<Select
 							name="filterGenres"
