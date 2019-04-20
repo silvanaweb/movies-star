@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const mkImagePath = name => {
 	return `https://image.tmdb.org/t/p/w200/${name}`;
 };
 
-// this component rendere the single movie item
-// the show state allows to render a simple animation (diffenrently from Angular, React does not offer a built-in animation library)
+// this component renders the single movie item
+// the show state allows to render a simple animation
 const MovieListItem = ({ genres, image, index, title }) => {
 	const [show, setShow] = React.useState(false);
 
 	React.useEffect(() => {
 		const timeout = setTimeout(() => {
 			setShow(true);
-		}, 80 * index);
+		}, 60 * index);
 		return () => clearTimeout(timeout);
 	}, []);
 
