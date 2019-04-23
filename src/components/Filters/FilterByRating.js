@@ -14,7 +14,7 @@ const FilterByRating = ({ className, setSelectedRating, rating }) => {
 			<RangeSlider
 				defaultValue={rating}
 				labels={{ tooltip: "rating from" }}
-				min={1}
+				min={0}
 				max={10}
 				step={0.5}
 				onValueChange={onSelectedRatingChange}
