@@ -4,8 +4,13 @@ exports[`should render FilterByRating correctly 1`] = `
 <div>
   <RangeSlider
     defaultValue={3}
+    labels={
+      Object {
+        "tooltip": "rating from",
+      }
+    }
     max={10}
-    min={1}
+    min={0}
     onValueChange={[Function]}
     step={0.5}
   />
