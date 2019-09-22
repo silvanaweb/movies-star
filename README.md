@@ -1,3 +1,5 @@
+View the demo of this app on: [Movies Star](https://movie-stars.herokuapp.com/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run the app
